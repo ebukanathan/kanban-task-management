@@ -3,7 +3,7 @@ import React from "react";
 function AddTask() {
   return (
     <div className="absolute inset-0 bg-black  opacity-80 z-10 flex justify-center items-center">
-      <form className="w-[380px] h-[475px] bg-white px-4 flex flex-col z-20">
+      <form className="w-[380px] h-auto bg-white px-4 flex flex-col z-20">
         <div className="flex flex-col mt-5">
           <label htmlFor="">Title</label>
           <input
@@ -14,7 +14,7 @@ function AddTask() {
             placeholder="e.g Take coffee break"
           />
         </div>
-        <div className="flex flex-col mt-5">
+        <div className="flex flex-col mt-3">
           <label htmlFor="">Description</label>
           <textarea
             name=""
@@ -24,7 +24,7 @@ function AddTask() {
             rows={3}
           />
         </div>
-        <div className="flex flex-col mt-5">
+        <div className="flex flex-col mt-3">
           <label htmlFor="">Subtask</label>
           <input
             type="text"
@@ -43,6 +43,17 @@ function AddTask() {
         </div>
         <button className="w-full rounded-lg shadow-lg py-1 mt-2">
           + add new Task
+        </button>
+        <div className="flex flex-col mt-3">
+          <label htmlFor="">Status</label>
+          <select className="px-3  rounded-lg h-[40px] w-full border-2 border-slate-300">
+            <option value="todo">Todo</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <button className="w-full my-5  text-white bg-[#635fc7] rounded-lg shadow-lg py-1 mt-2">
+          Create Task
         </button>
       </form>
     </div>
