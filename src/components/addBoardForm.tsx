@@ -1,38 +1,31 @@
+import React from "react";
 import Modal from "./Modal";
 
-function AddTask() {
+function addBoardForm() {
   return (
     <Modal>
       <form className="w-[380px] h-auto bg-white px-4 flex flex-col z-20">
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Title</label>
+        <div className="font-bold mt-5">Add New Board</div>
+        <div className="flex flex-col mt-4">
+          <label htmlFor="">Boardname</label>
           <input
             type="text"
             name=""
             value=""
             className="px-3 py-4 rounded-lg h-[20px] w-full border-2 border-slate-300 "
-            placeholder="e.g Take coffee break"
+            placeholder="web design"
           />
         </div>
+
         <div className="flex flex-col mt-3">
-          <label htmlFor="">Description</label>
-          <textarea
-            name=""
-            value=""
-            className="px-3  rounded-lg  w-full border-2 border-slate-300"
-            placeholder="e.g Take coffee break"
-            rows={3}
-          />
-        </div>
-        <div className="flex flex-col mt-3">
-          <label htmlFor="">Subtask</label>
+          <label htmlFor="">Board Column</label>
           <div className="flex gap-2">
             <input
               type="text"
               name=""
               value=""
               className="px-3 py-4 rounded-lg h-[20px] w-full border-2 border-slate-300"
-              placeholder="e.g Take coffee break"
+              placeholder="Todo"
             />
             <button>
               <img src="icon-cross.svg" alt="" />
@@ -44,30 +37,23 @@ function AddTask() {
               name=""
               value=""
               className="px-3 py-4 rounded-lg h-[20px] w-full border-2 border-slate-300"
-              placeholder="e.g Take coffee break"
+              placeholder="Doing"
             />
             <button>
               <img src="icon-cross.svg" alt="" />
             </button>
           </div>
         </div>
-        <button className="w-full rounded-lg shadow-lg py-1 mt-2">
-          + add new Task
+        <button className="w-full rounded-lg shadow-lg py-1 my-4">
+          + Add new Column
         </button>
-        <div className="flex flex-col mt-3">
-          <label htmlFor="">Status</label>
-          <select className="px-3  rounded-lg h-[40px] w-full border-2 border-slate-300">
-            <option value="todo">Todo</option>
-            <option value="doing">Doing</option>
-            <option value="done">Done</option>
-          </select>
-        </div>
+
         <button className="w-full my-5  text-white bg-[#635fc7] rounded-lg shadow-lg py-1 mt-2">
-          Create Task
+          Create New Board
         </button>
       </form>
     </Modal>
   );
 }
 
-export default AddTask;
+export default addBoardForm;
