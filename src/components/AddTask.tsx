@@ -1,8 +1,8 @@
-import React from "react";
+import Modal from "./Modal";
 
 function AddTask() {
   return (
-    <div className="absolute inset-0 bg-black  opacity-80 z-10 flex justify-center items-center">
+    <Modal>
       <form className="w-[380px] h-auto bg-white px-4 flex flex-col z-20">
         <div className="flex flex-col mt-5">
           <label htmlFor="">Title</label>
@@ -56,7 +56,7 @@ function AddTask() {
           Create Task
         </button>
       </form>
-    </div>
+    </Modal>
   );
 }
 
