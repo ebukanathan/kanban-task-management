@@ -1,11 +1,14 @@
 import React, { type MouseEventHandler } from "react";
 import ToggleButton from "./ToggleButton";
+import { useKanban } from "../context/kanbanContext";
 
 type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
 const SideBar: React.FC<ButtonProps> = ({ onClick }) => {
+  const { state } = useKanban();
+
   const sidebarItems = ["platform launch", "marketing plan", "roadmap"];
   return (
     <>

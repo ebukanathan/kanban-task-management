@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import SideBar from "./components/SideBar";
 // import AddTask from "./components/AddTask";
 import AddBoardForm from "./components/addBoardForm";
-// import data from "./data.json";
+import { useKanban } from "./context/kanbanContext";
 
-// const data = data.boards;
 function App() {
   const [isShowSideBar, setShowSideBar] = useState<boolean>(true);
-  // const [boards, setBoards] = useState(data);
+  const { state, dispatch } = useKanban();
 
   const toggleSideBar: React.MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
